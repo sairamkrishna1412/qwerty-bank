@@ -1,0 +1,465 @@
+<!DOCTYPE >
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/vendors/normalize.css" />
+        <link
+            rel="stylesheet"
+            href="./css/resources/style.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="./css/resources/queries.css"
+            type="text/css"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="./img/banking_logo.png"
+        />
+        <title>All customers</title>
+    </head>
+    <body>
+        <header>
+            <nav class="all-customers-nav">
+                <div>
+                    <img
+                        src="./img/banking_logo.png"
+                        alt="banking_logo"
+                        class="logo"
+                    />
+                    <div class="hero-text-box">
+                        <h1 class="hero-text">
+                            <a href="./index.html">Qwerty Bank</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="login-new-form">
+                    <form class="login-form">
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            class="form_field login-form-field login-form--username"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Password"
+                            class="form_field login-form-field login-form--password"
+                        />
+                        <button
+                            class="form_field form_btn login-form-field login-btn"
+                        >
+                            Login
+                        </button>
+                    </form>
+                    <div class="new-user">
+                        <a href="#" class="nav-main--new-user">New</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="new-user-dialog hidden">
+                <button class="close-dialog">&times;</button>
+                <div class="dialog-heading">
+                    <h1 class="hero-text dialog-heading-h1">Qwerty bank</h1>
+                    <span> is pleased to have you!</span>
+                </div>
+                <form>
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        class="form_field new-user--name"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        class="form_field new-user--email"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        class="form_field new-user--username"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        class="form_field new-user--password"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Re-enter password"
+                        class="form_field new-user--re-password"
+                    />
+                    <button class="form_field form_btn signup-btn">
+                        Sign up
+                    </button>
+                </form>
+            </div>
+            <div class="overlay hidden"></div>
+        </header>
+        <section class="section-user row">
+            <div class="user-login-head">
+                <h1 class="user-login-head--text">Login to continue</h1>
+            </div>
+            <div class="logout-btn-container">
+                <img
+                    src="img/logout_logo.png"
+                    alt=""
+                    class="logout-btn hidden"
+                />
+            </div>
+            <table class="customers-table">
+                <tr class="customers-table--head-row">
+                    <th class="customer-table--colname">Name</th>
+                    <th class="customer-table--colname">Email</th>
+                    <th class="customer-table--colname">Username</th>
+                    <!-- <th class="customer-table--colname">Phone</th> -->
+                    <th class="customer-table--colname">Password</th>
+                    <th class="customer-table--colname">Balance</th>
+                </tr>
+                <!-- <tr class="customers-table--data-row">
+                    <td class="customer-table-coldata">shiva</td>
+                    <td class="customer-table-coldata">
+                        shivaramkrishna@gmail.com
+                    </td>
+                    <td class="customer-table-coldata">shivaramkrishna</td>
+                    <td class="customer-table-coldata">1234567890</td>
+                    <td class="customer-table-coldata">shivap</td>
+                    <td class="customer-table-coldata">10000</td>
+                </tr>
+                <tr class="customers-table--data-row">
+                    <td class="customer-table-coldata">shiva</td>
+                    <td class="customer-table-coldata">
+                        shivaramkrishna@gmail.com
+                    </td>
+                    <td class="customer-table-coldata">shivaramkrishna</td>
+                    <td class="customer-table-coldata">1234567890</td>
+                    <td class="customer-table-coldata">shivap</td>
+                    <td class="customer-table-coldata">10000</td>
+                </tr>
+                <tr class="customers-table--data-row">
+                    <td class="customer-table-coldata">shiva</td>
+                    <td class="customer-table-coldata">
+                        shivaramkrishna@gmail.com
+                    </td>
+                    <td class="customer-table-coldata">shivaramkrishna</td>
+                    <td class="customer-table-coldata">1234567890</td>
+                    <td class="customer-table-coldata">shivap</td>
+                    <td class="customer-table-coldata">10000</td>
+                </tr> -->
+            </table>
+
+            <div class="user-account hidden">
+                <!--
+                Account balance and summary
+            -->
+                <div class="account-balance">
+                    <div>
+                        <p class="balance-label">Balance</p>
+                        <p class="balance-date-p">
+                            As of <span class="balance-date"> 14/12/20 </span>
+                        </p>
+                    </div>
+                    <p class="balance-value">₹10000</p>
+                </div>
+                <div class="account-movements-and-summary">
+                    <div class="account-movements-full">
+                        <!--
+                    account movements
+                -->
+                        <div class="movements-heading">Transactions</div>
+                        <div class="account-movements-header">
+                            <div class="movements-header-item">Sno</div>
+                            <div class="movements-header-item">Type</div>
+                            <div class="movements-header-item">Date</div>
+                            <div class="movements-header-item">Description</div>
+                            <div class="movements-header-item">Amount</div>
+                        </div>
+                        <div class="account-movements">
+                            <!-- <div class="movement-item">
+                                <div class="movement-sno movement-type--debit">
+                                    1
+                                </div>
+                                <div class="movement-type movement-type--debit">
+                                    debit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div>
+
+                            <div class="movement-item">
+                                <div class="movement-sno movement-type--credit">
+                                    2
+                                </div>
+                                <div
+                                    class="movement-type movement-type--credit"
+                                >
+                                    credit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div> -->
+                            <!-- <div class="movement-item">
+                                <div class="movement-sno movement-type--credit">
+                                    3
+                                </div>
+                                <div
+                                    class="movement-type movement-type--credit"
+                                >
+                                    credit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div>
+                            <div class="movement-item">
+                                <div class="movement-sno movement-type--debit">
+                                    4
+                                </div>
+                                <div class="movement-type movement-type--debit">
+                                    debit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div>
+                            <div class="movement-item">
+                                <div class="movement-sno movement-type--credit">
+                                    3
+                                </div>
+                                <div
+                                    class="movement-type movement-type--credit"
+                                >
+                                    credit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div>
+                            <div class="movement-item">
+                                <div class="movement-sno movement-type--credit">
+                                    3
+                                </div>
+                                <div
+                                    class="movement-type movement-type--credit"
+                                >
+                                    credit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div>
+                            <div class="movement-item">
+                                <div class="movement-sno movement-type--debit">
+                                    4
+                                </div>
+                                <div class="movement-type movement-type--debit">
+                                    debit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div>
+                            <div class="movement-item">
+                                <div class="movement-sno movement-type--credit">
+                                    51
+                                </div>
+                                <div
+                                    class="movement-type movement-type--credit"
+                                >
+                                    credit
+                                </div>
+                                <div class="movement-date">14/12/20</div>
+                                <div class="movement-description">water</div>
+                                <div class="movement-amount">₹2000</div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="account-summary-full">
+                        <div class="summary">
+                            <div class="summary-heading">Summary</div>
+                            <p class="summary-label movement-type--credit">
+                                Credit
+                            </p>
+                            <p class="summary-value summary-value--in">₹1234</p>
+                            <p class="summary-label movement-type--debit">
+                                Debit
+                            </p>
+                            <p class="summary-value summary-value--out">₹432</p>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                services html
+            -->
+                <div class="services-container">
+                    <div class="new-service new-service--transfer">
+                        <h4 class="service-heading">Transfer money</h4>
+                        <form class="transfer-form">
+                            <input
+                                type="text"
+                                placeholder="username"
+                                class="form_field transfer-form--username"
+                            />
+                            <input
+                                type="number"
+                                placeholder="amount"
+                                class="form_field transfer-form--amount"
+                            />
+                            <input
+                                type="text"
+                                placeholder="description"
+                                class="form_field transfer-form--description"
+                            />
+                            <button
+                                class="form_field submit-form submit-form--transfer"
+                            >
+                                &rarr;
+                            </button>
+                        </form>
+                    </div>
+                    <!--pay bills-->
+                    <div class="new-service new-service--paybill">
+                        <h4 class="service-heading">Pay bills</h4>
+                        <form class="paybill-form">
+                            <select
+                                name="bill-type"
+                                id="bill-type"
+                                class="form_field paybill-form--select"
+                            >
+                                <option value="Electricity bill">
+                                    Electricity
+                                </option>
+                                <option value="Mobile recharge">
+                                    Mobile Recharge
+                                </option>
+                                <!-- <option value="Brodband">Brodband</option>
+                                <option value="DTH">DTH</option> -->
+                            </select>
+                            <input
+                                type="number"
+                                placeholder="USC(service) number"
+                                class="form_field transfer-form-field paybill-form--service-number"
+                            />
+                            <input
+                                type="number"
+                                placeholder="mobile number"
+                                class="form_field transfer-form-field paybill-form--mobile hidden"
+                            />
+                            <input
+                                type="number"
+                                placeholder="amount"
+                                class="form_field transfer-form-field paybill-form--amount"
+                            />
+                            <input
+                                type="text"
+                                placeholder="description"
+                                class="form_field transfer-form-field paybill-form--description"
+                            />
+                            <button
+                                class="form_field transfer-form-field submit-form submit-form--paybill"
+                            >
+                                &rarr;
+                            </button>
+                        </form>
+                    </div>
+                    <!--Close account-->
+                    <div class="new-service new-service--close">
+                        <h4 class="service-heading">Close Account</h4>
+
+                        <form class="close-form">
+                            <input
+                                type="text"
+                                placeholder="username"
+                                class="form_field close-form--username"
+                            />
+                            <input
+                                type="password"
+                                placeholder="password"
+                                class="form_field close-form--password"
+                            />
+                            <button
+                                class="form_field submit-form submit-form--closeAcc"
+                            >
+                                &rarr;
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="current-user-profile">
+                <img src="./img/new_user_logo.png" alt="user picture" id="user-picture">
+                <div class="user-details">
+                    <div class="current-user-detail-container">
+                        <span class="user-detail">
+                            Name : &nbsp;     
+                        </span>
+                        <span class="user-detail-value current-user-name">
+                            Shiva ram krishna
+                        </span>
+                    </div>
+                    <div class="current-user-detail-container">
+                        <span class="user-detail">
+                            Date of Birth : &nbsp;
+                        </span>
+                        <span class="user-detail-value">
+                            20/03/1998
+                        </span>
+                    </div>
+                    <div class="current-user-detail-container">
+                        <span class="user-detail">
+                            Email : &nbsp;
+                        </span>
+                        <span class="user-detail-value">
+                            shivaramkrishna@gmail.com
+                        </span>
+                    </div>
+                    <div class="current-user-detail-container">
+                        <span class="user-detail">
+                            Password : &nbsp;
+                        </span>
+                        <span class="user-detail-value">
+                            shiva123
+                        </span>
+                    </div>
+                    <div class="current-user-detail-container">
+                        <span class="user-detail">
+                            Balance : &nbsp;
+                        </span>
+                        <span class="user-detail-value">
+                            120000
+                        </span>
+                    </div>
+                </div>
+                <div class="current-user-transfers">
+                    <a href="#" class="current-user-transfers-link">
+                        View Transactions
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section-all-customers row">
+            <ol class="all-customers-ordered-list">
+                
+            </ol> -->
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</html>

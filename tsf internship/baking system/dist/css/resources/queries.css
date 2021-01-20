@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1550px) {
+    .main-heading--h2 {
+        font-size: 250%;
+    }
+    .main-heading--image {
+        width: 240px;
+    }
+}
+@media only screen and (max-width: 1390px) {
+    .main-heading--h2 {
+        font-size: 230%;
+    }
+    .main-heading--image {
+        width: 220px;
+    }
+}
+@media only screen and (max-width: 1270px) {
+    .main-heading--h2 {
+        font-size: 210%;
+    }
+    .main-heading--image {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .logo {
+        height: 40px;
+        width: auto;
+    }
+    .hero-text {
+        font-size: 140%;
+    }
+    .main-heading--h2 {
+        font-size: 180%;
+    }
+    .main-heading--image {
+        width: 170px;
+    }
+    .login-new-form {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 975px) {
+    .hero-text {
+        font-size: 120%;
+    }
+}
